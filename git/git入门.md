@@ -94,6 +94,34 @@ git clone git@github.com:nanjolono/git-practice.git
 ```
 无需密码可以下载代码
 
+
+## 识别工作区认识状态
+
+![clobeSuccess](./ImageSource/cloneSucc.png)
+代码克隆成功后，在代码根路径上使用git bash here 可以看到这样的，一个界面，红色框住的部分为当前代码库所在的分支的名称
+那么先来添加两个的文件
+```bash
+touch test.txt  && touch test test1.txt
+```
+然后在执行
+```bash
+git status
+```
+可以看到这样的界面
+![untracked](./ImageSource/untracked.png)
+看到英文可一直到，当前这些文件还没有被纳入到git版本控制中。所以要执行一个添加文件的指令，将指定的文件纳入版本库中 
+```bash
+git add test.txt
+```
+在执行一下
+```bash
+git status
+```
+![addSucc](./ImageSource/addSuccess.png)
+
+可以看到当前代码已经被成功添加了
+但是这个时候并没有提交成功，仍还需要对已经纳入版本控制的文件，添加提交信息
+
 ### 将你的修改推送到远程仓库中
 
 ### 获取新的代码
